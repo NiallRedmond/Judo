@@ -16,11 +16,8 @@
 </p>
 
 <p>
-    <% today = Date.today%>
-    <% d = Date.new(today.year, @student.dob.month, @student.dob.day)%>
-    <% age = d.year - @student.dob.year - (d > today ? 1 : 0)%>
     <strong>Age:</strong>
-    <%= age %>
+    <%= @student.age %>
 </p>
 
 <p>

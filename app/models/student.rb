@@ -12,4 +12,9 @@ class Student < ActiveRecord::Base
 	
 	has_secure_password
 	
+	def age
+		d = Date.new(Date.today.year, dob.month, dob.day)
+		d.year - dob.year - (d > Date.today ? 1 : 0)
+	end
+	
 end
