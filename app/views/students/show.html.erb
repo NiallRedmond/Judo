@@ -16,6 +16,14 @@
 </p>
 
 <p>
+    <% today = Date.today%>
+    <% d = Date.new(today.year, @student.dob.month, @student.dob.day)%>
+    <% age = d.year - @student.dob.year - (d > today ? 1 : 0)%>
+    <strong>Age:</strong>
+    <%= age %>
+</p>
+
+<p>
   <strong>Belt:</strong>
   <%= @student.belt %>
 </p>
@@ -40,10 +48,7 @@
   <%= @student.judo_class.class_name %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @student.password_digest %>
-</p>
+
 
 <p>
 <% @student.matches.each do |match| %>
