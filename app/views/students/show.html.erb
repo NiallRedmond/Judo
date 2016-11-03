@@ -27,7 +27,13 @@
 
 <p>
   <strong>Gender:</strong>
-  <%= @student.gender %>
+  <% if @student.gender == false %>
+	<% gen = 'male'%>
+	<%= gen %>
+  <% else %>
+  <% gen = 'female'%>
+	<%= gen %>
+  <%end%>
 </p>
 
 <p>

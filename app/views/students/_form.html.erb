@@ -29,8 +29,13 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.check_box :gender %>
+	<strong>M|F</strong></br>
+    <%= f.radio_button :gender, "0" %>
+	<%= f.radio_button :gender, "1" %>
   </div>
+  
+
+  
   <div class="field">
     <%= f.label :photo %><br>
     <%= f.text_field :photo %>
